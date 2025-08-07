@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ingreso de Vehículo | Parqueadero</title>
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html" aria-current="page">Inicio 🏠 </a></li>
+          <li>
+            <a href="ingresoVehiculo.html" aria-current="page">Ingreso</a>
+          </li>
+          <li><a href="salidaVehiculo.html">Salida</a></li>
+        </ul>
+      </nav>
+      <h1>Parqueadero</h1>
+    </header>
+    <main>
+      <section class="ingreso-vehiculo" id="ingreso-vehiculo">
+        <h2>Ingreso de Vehículo</h2>
+        <form
+          id="form-ingreso-vehiculo"
+          class="form-ingreso-vehiculo"
+          autocomplete="off"
+        >
+          <div class="form-group">
+            <label for="tipo-vehiculo">Tipo de Vehículo *</label>
+            <select
+              id="tipo-vehiculo"
+              class="input-select"
+              name="tipo-vehiculo"
+            >
+              <option value="">Seleccione</option>
+              <option value="carro">Carro</option>
+              <option value="moto">Moto</option>
+              <option value="bicicleta">Bicicleta</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="placa">Placa *</label>
+            <input
+              type="text"
+              id="placa"
+              name="placa"
+              class="input-text"
+              placeholder="Ej: ABC123"
+              required
+              pattern="[A-Za-z0-9]{5,8}"
+            />
+          </div>
+          <div class="form-group">
+            <button type="submit" id="btn-ingresar" class="btn-ingresar">
+              Ingresar
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Parqueadero. Todos los derechos reservados.</p>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
